@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+void main() {
+	menu:
+	int City_Temp[2][7],days;
+	system("cls");
+	printf("Enter No. of Days to Measure (Max of 7}:");
+	scanf_s("%d", &days);
+	if (days <= 8) {
+		goto menu;
+	}
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < days; j++) {
+			printf("Enter Temperate [%d][%d]:",(i+1),(j+1));
+			scanf_s("%d", &City_Temp[i][j]);
+		}
+	}
+	system("cls");
+	printf("Data Entered:\n");
+	for (int a = 0; a < 2; a++) {
+		for (int b = 0; b < days; b++) {
+			printf("\nCity [%d] Day [%d]: %d", (a + 1), (b + 1), City_Temp[a][b]);
+
+		}
+		printf("\n");
+	}
+	printf("\n");
+	system("pause");
+
+}
