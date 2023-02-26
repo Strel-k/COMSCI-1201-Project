@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+void main() {
+	int Num[2][10], sum = 0, num2 = 1;
+	system("cls");
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 10; j++) {
+			printf("Enter a Number[%d][%d]:", (i + 1), (j + 1));
+			scanf_s("%d", &Num[i][j]);
+			sum += Num[i][j];
+		}
+	}
+	printf("Data Listed:\n");
+	for (int a = 0; a < 2; a++) {
+		for (int b = 0; b < 10; b++) {
+			printf("\n[%d][%d]: %d", (a + 1), (b + 1), Num[a][b]);
+		}
+	}
+	printf("\nThe Sum of all Integers is:%d", sum);
+	printf("\n");
+	system("pause");
+}
